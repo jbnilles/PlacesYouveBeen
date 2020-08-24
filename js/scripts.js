@@ -1,4 +1,4 @@
-
+//business logic//
 function Passport() {
   this.places = [];
 }
@@ -22,6 +22,9 @@ function Destination(location, landmarks, timeOfYear) {
   this.landmarks = landmarks;
   this.timeOfYear = timeOfYear;
 }
+Destination.prototype.showDetails = function() {
+return 'I went to ' + this.location + ' in the ' + this.timeOfYear + ", while I was here I went to " + this.landmarks + '.';
+}
 
 
 
@@ -34,19 +37,19 @@ almaPassport.addDestination(springBreak);
 almaPassport.addDestination(skiing);
 almaPassport.addDestination(camping);
 
-
+//User logic //
 $(document).ready(function () {
 
-  almaPassport.places.forEach(element => {
+  almaPassport.places.forEach( function (element) {
     $('#placesList').append('<li>' + element.location + '</li>');
   });
 
   $("#placesList li").click(function() {//$('li').on('click', function() {
-    $('#resultList').text('');
+    $('#resultList').text('');//<.text('') to blank out the .append list below 
     $('#resultCard').show();
     let place = almaPassport.findByLocation($(this).text());
-    $('#resultHeader').text(place.location + '!');
-    $('#resultList').append('<li>' + place.landmarks + '</li>');
+    $('#resultHeader').text(place.showDetails())//place.location + '!');
+    $('#resultList').append('<li>' + place.landmarks + '</li>');//<.append for HTML elements to add
     $('#resultList').append('<li>' + place.timeOfYear + '</li>');
   });
 

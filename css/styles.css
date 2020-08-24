@@ -6,6 +6,7 @@ body{
 }
 .jumbotron{
   background-color: rgb(233, 233, 60);
+  padding-top: 25px;
 }
 #placesCard{
   background-color: blue;
@@ -16,6 +17,8 @@ body{
 }
 .container{
   background-color: rgb(219, 14, 175);
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 .card{
   padding-top: 25px;
