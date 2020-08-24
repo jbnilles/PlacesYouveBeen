@@ -12,10 +12,20 @@ Create a website where you can keep track of all the places you've been. Each de
 creating constructors
 passport & destination 
 
-test 1 
+Test 1 
 program will input new destination information and place in passport. 
 input: var destination1= new destination (location, landmark,tomeOfYear)
 Output: passport logs 
+
+Test 2 
+program will use a .prototype.findbylocation to search passport for index by location 
+input: passport.findByLocation(location);
+output: destination { location:,Landmarks:,timeOfYear}
+
+Test 3 
+program will show more information on places listed on HTML
+input: click on place
+output: show more inforamion on subject 
 
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
