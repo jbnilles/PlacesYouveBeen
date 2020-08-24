@@ -1,0 +1,23 @@
+#resultCard{
+  display: none;
+}
+body{
+  background-color: beige;
+}
+.jumbotron{
+  background-color: rgb(233, 233, 60);
+}
+#placesCard{
+  background-color: blue;
+
+}
+#resultCard{
+  background-color: rgb(134, 6, 27);
+}
+.container{
+  background-color: rgb(219, 14, 175);
+}
+.card{
+  padding-top: 25px;
+  margin-top: 25px;
+}

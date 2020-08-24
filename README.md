@@ -23,6 +23,11 @@ input: passport.findByLocation(location);
 output: destination { location:,Landmarks:,timeOfYear}
 
 Test 3 
+program will make a list with locations that are clickable
+input: click on place
+output: alert for click
+
+Test 4 
 program will show more information on places listed on HTML
 input: click on place
 output: show more inforamion on subject 

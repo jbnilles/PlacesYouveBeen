@@ -38,16 +38,17 @@ almaPassport.addDestination(camping);
 $(document).ready(function () {
 
   almaPassport.places.forEach(element => {
-  $('#placesList').append('<li>' + element.location + '</li>');
+    $('#placesList').append('<li>' + element.location + '</li>');
   });
-  $("li").click(function() {//$('li').on('click', function() {
-    alert($(this).text());
-    //this.text();
+
+  $("#placesList li").click(function() {//$('li').on('click', function() {
+    $('#resultList').text('');
+    $('#resultCard').show();
+    let place = almaPassport.findByLocation($(this).text());
+    $('#resultHeader').text(place.location + '!');
+    $('#resultList').append('<li>' + place.landmarks + '</li>');
+    $('#resultList').append('<li>' + place.timeOfYear + '</li>');
   });
-// $("li").click(function() {
-//  $(".place-showing").toggle();
-//  $(".place-hidden").toggle();
-//});
 
 });
 
